@@ -1,25 +1,26 @@
 [Note]
     first create a remote branch on server and then push data to server from client
     
-    "git  remote  add  origin  git@github.com:SuperRxan/lua.git"
+    
+   (1) "git  remote  add  origin  git@github.com:SuperRxan/lua.git"
     ---> note1: git@ instead of git://
          note2: github.com:SuperRxan instead of github.com/SuperRxan
     ---> This operation add something in .git/config file
    
-   [remote "origin"]
+     [remote "origin"]
         url = git@github.com:SuperRxan/lua.git
         fetch = +refs/heads/*:refs/remotes/origin/*
         
-    "git push --set-upstream origin master"
+   (2) "git push --set-upstream origin master"
     ---> This operation push data to server
     ---> This operation also config something in .git/config file
     
-    [branch "master"]
+     [branch "master"]
         remote = origin
         merge = refs/heads/master
         
-    which means: 
-    Branch 'master' set up to track remote branch 'master' from 'origin'.
-    We can also use this command to set this config 
-    "git branch -u origin/master"
+     which means: 
+     Branch 'master' set up to track remote branch 'master' from 'origin'.
+     We can also use this command to set this config 
+     "git branch -u origin/master"
     
