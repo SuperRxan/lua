@@ -1,0 +1,4 @@
+[Note]
+    create a local repo and push to remote server
+    
+    git  remote  add  origin  git://github.com:SuperRxan/lua.git
