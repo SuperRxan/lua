@@ -1,4 +1,14 @@
 [Note]
-    create a local repo and push to remote server
+    first create a remote branch on server and then push data to server from client
     
-    git  remote  add  origin  git://github.com:SuperRxan/lua.git
+    "git  remote  add  origin  git@github.com:SuperRxan/lua.git"
+    ---> note1: git@ instead of git://
+         note2: github.com:SuperRxan instead of github.com/SuperRxan
+    ---> This operation add something in .git/config file
+   
+   [remote "origin"]
+        url = git@github.com:SuperRxan/lua.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+        
+    "git push --set-upstream origin master"
+    ---> This operation push data to server
