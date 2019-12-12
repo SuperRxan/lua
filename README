@@ -12,3 +12,14 @@
         
     "git push --set-upstream origin master"
     ---> This operation push data to server
+    ---> This operation also config something in .git/config file
+    
+    [branch "master"]
+        remote = origin
+        merge = refs/heads/master
+        
+    which means: 
+    Branch 'master' set up to track remote branch 'master' from 'origin'.
+    We can also use this command to set this config 
+    "git branch -u origin/master"
+    
